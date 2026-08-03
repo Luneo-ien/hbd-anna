@@ -1,0 +1,1584 @@
+/* =========================================================
+   IMPORT FONT
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Share+Tech+Mono&family=VT323&display=swap');
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+body{
+
+    font-family:"Inter",sans-serif;
+
+    background:
+    radial-gradient(circle at top,#1d1d1d,#090909);
+
+    color:white;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.hidden{
+    display:none !important;
+}
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+section{
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+#loading-screen{
+
+    flex-direction:column;
+
+    background:#090909;
+
+}
+
+#loading-screen h1{
+
+    font-size:40px;
+
+    font-weight:600;
+
+    margin-bottom:40px;
+
+    letter-spacing:3px;
+
+}
+
+.loading-bar{
+
+    width:360px;
+
+    max-width:90vw;
+
+    height:10px;
+
+    background:#1b1b1b;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    border:1px solid #2d2d2d;
+
+}
+
+.loading-progress{
+
+    width:0%;
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #5ef6c1,
+    #4dcfff);
+
+    box-shadow:
+
+    0 0 14px rgba(77,207,255,.6);
+
+}
+
+#loading-percent{
+
+    margin-top:22px;
+
+    font-size:22px;
+
+    font-family:"Share Tech Mono",monospace;
+
+    letter-spacing:2px;
+
+}
+
+#loading-status{
+
+    margin-top:14px;
+
+    color:#8f8f8f;
+
+    letter-spacing:1px;
+
+    font-size:15px;
+
+}
+
+/* =========================================================
+   PHONE SCREEN
+========================================================= */
+
+#phone-screen{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+
+    radial-gradient(circle,#181818,#070707);
+
+}
+
+/* =========================================================
+   PHONE BODY
+========================================================= */
+
+.phone{
+
+    width:350px;
+
+    max-width:90vw;
+
+
+
+    background:
+
+    linear-gradient(
+    180deg,
+    #cfcfcf,
+    #b9b9b9);
+
+    border-radius:42px;
+
+    padding:22px;
+
+    box-shadow:
+
+    0 22px 60px rgba(23, 32, 163, 0.897),
+
+    inset 0 3px 8px rgba(15, 128, 173, 0.35),
+
+    inset 0 -6px 12px rgba(0,0,0,.15);
+
+    border:2px solid #9f9f9f;
+
+    position:relative;
+
+}
+
+/* =========================================================
+   NOKIA LOGO
+========================================================= */
+
+.phone::before{
+
+    content:"NOKIA";
+
+    position:absolute;
+
+    top:16px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-weight:700;
+
+    font-size:15px;
+
+    color:#050505;
+
+    letter-spacing:4px;
+
+}
+
+/* =========================================================
+   SPEAKER
+========================================================= */
+
+.speaker{
+
+    width:90px;
+
+    margin:8px auto 24px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+.speaker span{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#7f7f7f;
+
+    box-shadow:
+
+    inset 0 1px 2px rgba(255,255,255,.45),
+
+    inset 0 -1px 2px rgba(0,0,0,.5);
+
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.phone-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:16px;
+
+    padding:0 4px;
+
+    font-family:"Share Tech Mono",monospace;
+
+    color:#163323;
+
+    font-size:16px;
+
+}
+
+#phone-clock{
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+#phone-date{
+
+    font-size:15px;
+
+}
+
+/* =========================================================
+   LCD DISPLAY
+========================================================= */
+
+.phone-display{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        180deg,
+        #b9d7a7 0%,
+        #9fc48e 40%,
+        #89af79 100%
+    );
+
+    border:8px solid #4d4d4d;
+
+    border-radius:16px;
+
+    min-height:260px;
+
+    padding:28px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    box-shadow:
+        inset 0 0 24px rgba(0,0,0,.18),
+        inset 0 2px 3px rgba(255,255,255,.35),
+        0 2px 8px rgba(0,0,0,.35);
+
+    animation:lcdFlicker 9s infinite;
+}
+
+/* =========================================================
+   LCD GLOW
+========================================================= */
+
+.phone-display::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,255,255,.12),
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+/* =========================================================
+   SCANLINES
+========================================================= */
+
+.scanline{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            rgba(0,0,0,.045) 0px,
+            rgba(0,0,0,.045) 1px,
+            transparent 2px,
+            transparent 4px
+        );
+
+    opacity:.55;
+
+    pointer-events:none;
+
+    z-index:20;
+}
+
+/* =========================================================
+   LCD NOISE
+========================================================= */
+
+.phone-display::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+        radial-gradient(rgba(0,0,0,.03) 1px, transparent 1px);
+
+    background-size:6px 6px;
+
+    opacity:.35;
+
+    pointer-events:none;
+}
+
+/* =========================================================
+   MESSAGE ICON
+========================================================= */
+
+.message-icon{
+
+    position:relative;
+
+    width:92px;
+
+    height:70px;
+
+    margin-bottom:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:2;
+
+}
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+.envelope{
+
+    position:relative;
+
+    width:72px;
+
+    height:48px;
+
+    background:#35563f;
+
+    border:3px solid #183123;
+
+}
+
+.flap{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+}
+
+.flap::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+
+    height:3px;
+
+    background:#183123;
+
+    top:0;
+
+}
+
+.flap::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 49%,
+            #183123 50%,
+            transparent 51%
+        ),
+        linear-gradient(
+            225deg,
+            transparent 49%,
+            #183123 50%,
+            transparent 51%
+        );
+}
+
+.paper{
+
+    position:absolute;
+
+    left:11px;
+
+    top:-9px;
+
+    width:48px;
+
+    height:20px;
+
+    background:#dfead6;
+
+    border:2px solid #35563f;
+}
+
+/* =========================================================
+   LCD TEXT
+========================================================= */
+
+.phone-display h2{
+
+    font-family:"VT323",monospace;
+
+    font-size:38px;
+
+    color:#163523;
+
+    letter-spacing:2px;
+
+    margin-bottom:8px;
+
+    z-index:2;
+
+}
+
+.phone-display p{
+
+    font-family:"VT323",monospace;
+
+    font-size:28px;
+
+    color:#234634;
+
+    margin-bottom:28px;
+
+    z-index:2;
+
+}
+
+/* =========================================================
+   OPEN BUTTON
+========================================================= */
+
+#open-btn{
+
+    padding:12px 42px;
+
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #565b66,
+            #1b1111
+        );
+
+    color:white;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    transition:.25s;
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,.25);
+
+    z-index:2;
+
+}
+
+#open-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 0 18px rgba(92,227,156,.55),
+        0 7px 18px rgba(0,0,0,.3);
+
+}
+
+#open-btn:active{
+
+    transform:scale(.97);
+
+}
+
+/* =========================================================
+   NAVIGATION PAD
+========================================================= */
+
+.navigation-pad{
+
+    margin:26px auto 24px;
+
+    width:180px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    user-select:none;
+
+}
+
+.nav-row{
+
+    display:grid;
+
+    grid-template-columns:52px 52px 52px;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.fake-btn{
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #efefef,
+            #bcbcbc
+        );
+
+    color:#444;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    box-shadow:
+
+        inset 0 2px 3px rgba(255,255,255,.9),
+
+        inset 0 -4px 5px rgba(0,0,0,.18),
+
+        0 5px 8px rgba(0,0,0,.22);
+
+    pointer-events:none;
+
+}
+
+.center-btn{
+
+    background:
+
+        radial-gradient(
+            circle,
+            #d6d6d6,
+            #9d9d9d
+        );
+
+    font-size:18px;
+
+}
+
+/* =========================================================
+   KEYPAD
+========================================================= */
+
+.keypad{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:14px;
+
+}
+
+.key{
+
+    height:54px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #f6f6f6,
+            #bebebe
+        );
+
+    font-family:"Share Tech Mono",monospace;
+
+    font-size:20px;
+
+    color:#3b3b3b;
+
+    box-shadow:
+
+        inset 0 2px 2px rgba(255,255,255,.95),
+
+        inset 0 -4px 4px rgba(0,0,0,.18),
+
+        0 5px 10px rgba(0,0,0,.20);
+
+    pointer-events:none;
+
+}
+
+/* =========================================================
+   PHONE APPEAR
+========================================================= */
+
+.phone{
+
+    animation:phoneAppear .8s ease;
+
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes phoneAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(30px)
+
+        scale(.92);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0)
+
+        scale(1);
+
+    }
+
+}
+
+@keyframes lcdFlicker{
+
+    0%{
+
+        filter:brightness(1);
+
+    }
+
+    4%{
+
+        filter:brightness(.99);
+
+    }
+
+    9%{
+
+        filter:brightness(1.01);
+
+    }
+
+    15%{
+
+        filter:brightness(.98);
+
+    }
+
+    22%{
+
+        filter:brightness(1);
+
+    }
+
+    35%{
+
+        filter:brightness(.995);
+
+    }
+
+    47%{
+
+        filter:brightness(1);
+
+    }
+
+    63%{
+
+        filter:brightness(.985);
+
+    }
+
+    74%{
+
+        filter:brightness(1.01);
+
+    }
+
+    87%{
+
+        filter:brightness(1);
+
+    }
+
+    100%{
+
+        filter:brightness(.995);
+
+    }
+
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:768px){
+
+    .phone{
+
+        width:360px;
+
+        padding:18px;
+
+    }
+
+    .phone-display{
+
+        min-height:220px;
+
+    }
+
+    .phone-display h2{
+
+        font-size:32px;
+
+    }
+
+    .phone-display p{
+
+        font-size:24px;
+
+    }
+
+    .navigation-pad{
+
+        width:165px;
+
+    }
+
+    .fake-btn{
+
+        width:48px;
+
+        height:48px;
+
+        font-size:20px;
+
+    }
+
+    .key{
+
+        height:48px;
+
+        font-size:18px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .phone{
+
+        width:96vw;
+
+        border-radius:34px;
+
+        padding:16px;
+
+    }
+
+    .speaker{
+
+        width:72px;
+
+    }
+
+    .speaker span{
+
+        width:6px;
+
+        height:6px;
+
+    }
+
+    .phone-display{
+
+        min-height:200px;
+
+        padding:22px 16px;
+
+    }
+
+    .phone-display h2{
+
+        font-size:28px;
+
+    }
+
+    .phone-display p{
+
+        font-size:22px;
+
+    }
+
+    .navigation-pad{
+
+        transform:scale(.9);
+
+        margin:20px auto;
+
+    }
+
+    .keypad{
+
+        gap:10px;
+
+    }
+
+    .key{
+
+        height:44px;
+
+        font-size:17px;
+
+    }
+
+}
+
+/* =========================================================
+   SMALL POLISH
+========================================================= */
+
+.phone{
+
+    transition:transform .35s ease;
+
+}
+
+.phone:hover{
+
+    transform:translateY(-3px);
+
+}
+
+::selection{
+
+    background:#79d9b3;
+
+    color:#111;
+
+}
+
+/* =========================================================
+   DECRYPT
+========================================================= */
+
+.decrypt-box{
+
+    width:420px;
+
+    max-width:90vw;
+
+    text-align:center;
+
+}
+
+.decrypt-box h2{
+
+    font-family:"VT323", monospace;
+
+    font-size:46px;
+
+    margin-bottom:35px;
+
+}
+
+.decrypt-bar{
+
+    width:100%;
+
+    height:12px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:#222;
+
+    margin-bottom:18px;
+
+}
+
+#decrypt-progress{
+
+    width:0%;
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #5cff9c,
+        #47d8ff
+    );
+
+    box-shadow:0 0 15px rgba(71,216,255,.45);
+
+}
+
+#decrypt-percent{
+
+    font-family:"Share Tech Mono", monospace;
+
+    font-size:22px;
+
+    letter-spacing:2px;
+
+}
+
+#question-area{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    margin-top:30px;
+
+}
+
+#question-area input{
+
+    width:280px;
+
+    padding:14px;
+
+    border-radius:8px;
+
+    border:none;
+
+    outline:none;
+
+    font-size:16px;
+
+}
+
+#question-area button{
+
+    padding:14px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+}
+
+.equation-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.equation{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.eq-row{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    font-size:22px;
+
+    font-family:"Share Tech Mono", monospace;
+
+}
+
+.coef{
+
+    width:34px;
+
+    height:34px;
+
+    text-align:center;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:6px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    background:#d8ffd8;
+
+}
+
+.arrow{
+
+    text-align:center;
+
+    font-size:30px;
+
+}
+
+/* ==========================================
+   INTRO
+========================================== */
+
+#intro-screen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#000;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+}
+
+.intro-box{
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+#intro-text{
+
+    font-size:42px;
+
+    font-family:"VT323", monospace;
+
+    color:white;
+
+    min-height:60px;
+
+    letter-spacing:2px;
+
+}
+
+/* =========================================
+   WRAPPED
+========================================= */
+
+#wrapped-screen{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#000;
+
+    z-index:5000;
+
+}
+
+#wrapped-screen.hidden{
+
+    display:none;
+
+}
+
+#wrapped-image{
+
+    position:absolute;
+
+    width:85%;
+
+    height:85%;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+
+    opacity:0;
+
+}
+
+#wrapped-screen.active #wrapped-image{
+
+    opacity:1;
+
+    transform:scale(1.08);
+
+}
+
+.wrapped-overlay{
+
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    align-items:center;
+
+    padding:70px 30px 0;
+
+    text-align:center;
+
+    z-index:2;
+
+}
+
+#wrapped-title{
+
+    color:#fff;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+    letter-spacing:2px;
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+}
+
+#wrapped-text{
+
+    color:#fff;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    max-width:700px;
+
+    white-space:pre-line;
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+}
+
+.wrapped-show{
+
+    animation:fadeUp .8s forwards;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ======================
+   PROGRESS BAR
+====================== */
+
+.wrapped-progress{
+
+    position:absolute;
+
+    top:18px;
+
+    left:20px;
+
+    right:20px;
+
+    height:5px;
+
+    border-radius:99px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.18);
+
+    z-index:10;
+
+}
+
+#wrapped-progress-fill{
+
+    width:0%;
+
+    height:100%;
+
+    background:#ffffff;
+
+    transition:width .15s linear;
+
+}
+
+/* ======================
+   CLICK AREA
+====================== */
+
+#wrapped-screen{
+
+    cursor:pointer;
+
+}
+
+/* ======================
+   MOBILE
+====================== */
+
+@media(max-width:768px){
+
+    #wrapped-title{
+
+        font-size:32px;
+
+    }
+
+    #wrapped-text{
+
+        font-size:18px;
+
+        line-height:1.7;
+
+        padding:0 10px;
+
+    }
+
+    .wrapped-overlay{
+
+        padding:60px 25px;
+
+    }
+
+}
+
+/* =========================================
+   QUOTES SCREEN
+========================================= */
+#quotes-screen {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    overflow: hidden;
+    z-index: 6000;
+}
+
+#quotes-screen.hidden {
+    display: none;
+}
+
+.quotes-bg {
+    position: absolute;
+    inset: 0;
+    background: url("../images/background.jpg") center/cover;
+    filter: blur(8px) brightness(.35);
+    transform: scale(1.1);
+}
+
+.quotes-box {
+    position: relative;
+    max-width: 850px;
+    padding: 40px;
+    text-align: center;
+    z-index: 2;
+}
+
+#quote-text {
+    color: #fff;
+    font-size: 34px;
+    line-height: 1.8;
+    font-weight: 500;
+    white-space: pre-line;
+    opacity: 0;
+    transition: .8s;
+}
+
+/* =========================================
+   CAKE SCREEN & FLAME FIX
+========================================= */
+#cake-screen {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9000;
+}
+
+#cake-screen.hidden {
+    display: none;
+}
+
+.cake-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cake-img {
+    width: 320px;
+    max-width: 80vw;
+}
+
+#flame {
+    position: absolute;
+    top: -15px; /* Nếu ngọn lửa chưa đè đúng nến, mày tăng/giảm số này (ví dụ: -20px hoặc 0px) */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#cake-note {
+    margin-top: 25px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Share Tech Mono", monospace;
+}
+
+/* =========================================
+   ENDING SCREEN
+========================================= */
+#ending-screen {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9500;
+    text-align: center;
+}
+
+#ending-screen.hidden {
+    display: none;
+}
+
+#ending-screen h1 {
+    font-size: 48px;
+    color: #ff5e7e;
+    margin-bottom: 15px;
+}
+
+#ending-screen p {
+    font-size: 20px;
+    color: #ccc;
+} 
