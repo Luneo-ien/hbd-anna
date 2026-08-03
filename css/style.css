@@ -1582,3 +1582,19 @@ section{
     font-size: 20px;
     color: #ccc;
 } 
+
+/* =========================================
+   MOBILE RESPONSIVE FIX (CHO ĐIỆN THOẠI)
+========================================= */
+@media screen and (max-width: 480px) {
+    html, body {
+        overflow-x: hidden !important;
+        width: 100vw;
+    }
+
+    /* Thu nhỏ toàn bộ máy Nokia vừa vặn màn hình điện thoại */
+    body {
+        zoom: 0.72; /* Tự động scale 72% cho iPhone / Android */
+    }
+}
+
