@@ -1,3 +1,4 @@
+
 /* =========================================================
    IMPORT FONT
 ========================================================= */
@@ -1611,5 +1612,32 @@ section{
     }
 }
 
+/* Đổi toàn bộ chữ trong Wrapped/Slide số 2 thành màu đen */
+.slide:nth-child(2), 
+#slide2, 
+#wrapped2,
+.wrapped-2 {
+    color: #000000 !important;
+}
+
+/* Đổi màu chữ của các thẻ con (tiêu đề, câu hỏi, văn bản) trong slide 2 */
+.slide:nth-child(2) *, 
+#slide2 *, 
+#wrapped2 *,
+.wrapped-2 * {
+    color: #000000 !important;
+}
+
+/* Đổi màu chữ ô nhập liệu & chữ gợi ý (placeholder) trong slide 2 */
+.slide:nth-child(2) input, 
+#wrapped2 input {
+    color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+.slide:nth-child(2) input::placeholder, 
+#wrapped2 input::placeholder {
+    color: #555555 !important;
+}
 
 
