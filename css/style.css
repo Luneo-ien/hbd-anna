@@ -1584,21 +1584,30 @@ section{
 } 
 
 /* =========================================
-   FIX RESPONSIVE CHO ĐIỆN THOẠI (DÙNG TRANSFORM)
+   FIX CĂN GIỮA MÀN HÌNH ĐIỆN THOẠI
 ========================================= */
 @media screen and (max-width: 600px) {
-    html, body {
-        overflow-x: hidden !important;
-        width: 100% !important;
-        position: relative;
+    html {
+        width: 100%;
+        overflow-x: hidden;
     }
 
     body {
-        /* Thu nhỏ toàn bộ giao diện xuống 60% và căn giữa */
-        transform: scale(0.6) !important;
+        width: 100vw !important;
+        min-height: 100vh !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Target trực tiếp vào thẻ chứa toàn bộ nội dung/máy nokia */
+    body > * {
+        transform: scale(0.68) !important;
         transform-origin: top center !important;
-        width: 166.66% !important; /* Bù lại khoảng trống do scale */
-        margin-left: -33.33% !important;
+        margin-top: 10px !important;
     }
 }
 
