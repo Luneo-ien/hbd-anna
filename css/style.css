@@ -1584,17 +1584,23 @@ section{
 } 
 
 /* =========================================
-   MOBILE RESPONSIVE FIX (CHO ĐIỆN THOẠI)
+   FIX RESPONSIVE CHO ĐIỆN THOẠI (DÙNG TRANSFORM)
 ========================================= */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     html, body {
         overflow-x: hidden !important;
-        width: 100vw;
+        width: 100% !important;
+        position: relative;
     }
 
-    /* Thu nhỏ toàn bộ máy Nokia vừa vặn màn hình điện thoại */
     body {
-        zoom: 0.72; /* Tự động scale 72% cho iPhone / Android */
+        /* Thu nhỏ toàn bộ giao diện xuống 60% và căn giữa */
+        transform: scale(0.6) !important;
+        transform-origin: top center !important;
+        width: 166.66% !important; /* Bù lại khoảng trống do scale */
+        margin-left: -33.33% !important;
     }
 }
+
+
 
