@@ -1585,40 +1585,34 @@ section{
 } 
 
 /* =========================================
-   FIX CĂN GIỮA MÀN HÌNH ĐIỆN THOẠI
+   FIX TRIỆT ĐỂ KHUNG NOKIA TRÊN ĐIỆN THOẠI
 ========================================= */
 @media screen and (max-width: 600px) {
-    html {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    body {
-        width: 100vw !important;
-        min-height: 100vh !important;
+    /* Khóa màn hình không cho trượt ngang */
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
         margin: 0 !important;
         padding: 0 !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: flex-start !important;
-        overflow-x: hidden !important;
     }
 
-    /* Target trực tiếp vào thẻ chứa toàn bộ nội dung/máy nokia */
-    body > * {
-        transform: scale(0.68) !important;
+    /* Ép khung Nokia và toàn bộ container thu nhỏ lại */
+    .container, .phone, .nokia, .wrapper, main, body > div {
+        max-width: 90vw !important; /* Giới hạn rộng tối đa 90% màn hình điện thoại */
+        margin: 0 auto !important;  /* Căn giữa tuyệt đối */
+        box-sizing: border-box !important;
+    }
+
+    /* Chiêu cuối: Scale nguyên cái Nokia vừa vặn */
+    body {
+        zoom: 0.65 !important;
+        -moz-transform: scale(0.65);
+        -webkit-transform: scale(0.65);
+        transform: scale(0.65) !important;
         transform-origin: top center !important;
-        margin-top: 10px !important;
     }
-}
-
-/* Đổi toàn bộ chữ trong Wrapped/Slide số 2 thành màu đen */
-.slide:nth-child(2), 
-#slide2, 
-#wrapped2,
-.wrapped-2 {
-    color: #000000 !important;
-}
+}  
 
 
 
