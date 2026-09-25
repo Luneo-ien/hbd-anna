@@ -109,13 +109,13 @@ function showIntro() {
     introScreen.style.display = "flex";
 
     const lines = [
-        "Hi Anna...",
-        "I made something for you.",
-        "It took me quite a while...",
-        "I wanted this to be special.",
-        "So...",
-        "Today is your birthday ❤️",
-        "Happy Birthday ❤️"
+        "Hei Anna...",
+        "Tein sinulle jotain.",
+        "Tämän tekemiseen meni melko kauan...",
+        "Halusin tehdä tästä jotain erityistä.",
+        "Joten...",
+        "Tänään on sinun syntymäpäiväsi ❤️",
+        "Hyvää syntymäpäivää ❤️"
     ];
 
     let line = 0;
