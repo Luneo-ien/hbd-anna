@@ -7,32 +7,39 @@ const quotes = [
     "I hope today makes you smile.",
     "Thank you for being part of my life.",
     "And once again...",
-    "Happy Birthday ❤️",
-    "Black busy"
+    "Happy Birthday ❤️"
 ];
 
 const quotesScreen = document.getElementById("quotes-screen");
 const quoteText = document.getElementById("quote-text");
 let quoteIndex = 0;
 
-function showQuotes(){
+function showQuotes() {
+    if (!quotesScreen || !quoteText) {
+        showCake();
+        return;
+    }
+
     quotesScreen.classList.remove("hidden");
     quotesScreen.style.display = "flex";
     quoteIndex = 0;
     nextQuote();
 }
 
-function nextQuote(){
-    if(quoteIndex >= quotes.length){
+function nextQuote() {
+    if (quoteIndex >= quotes.length) {
         quotesScreen.classList.add("hidden");
         quotesScreen.style.display = "none";
-        if(typeof showCake === "function") showCake();
+
+        if (typeof showCake === "function") {
+            showCake();
+        }
         return;
     }
 
     quoteText.style.opacity = "0";
 
-    setTimeout(()=>{
+    setTimeout(() => {
         quoteText.textContent = quotes[quoteIndex];
         quoteText.style.opacity = "1";
         quoteIndex++;
