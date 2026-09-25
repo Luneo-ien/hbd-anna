@@ -1,82 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday ❤️</title>
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
-    <!-- 1. LOADING SCREEN -->
     <section id="loading-screen">
         <h1>Loading...</h1>
-        <div class="loading-bar">
-            <div class="loading-progress"></div>
-        </div>
+        <div class="loading-bar"><div class="loading-progress"></div></div>
         <p id="loading-percent">0%</p>
         <p id="loading-status">Initializing...</p>
     </section>
 
-    <!-- 2. NOKIA PHONE SCREEN -->
     <section id="phone-screen" class="hidden">
         <div class="phone">
-            <!-- Speaker -->
-            <div class="speaker">
-                <span></span><span></span><span></span>
-                <span></span><span></span><span></span>
-            </div>
-
-            <!-- Header -->
-            <div class="phone-top">
-                <span id="phone-date">02 AUG 2026</span>
-                <span id="phone-clock">00:00</span>
-            </div>
-
-            <!-- LCD -->
+            <div class="speaker"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="phone-top"><span id="phone-date">02 AUG 2026</span><span id="phone-clock">00:00</span></div>
             <div class="phone-display">
                 <div class="scanline"></div>
-                <div class="message-icon">
-                    <div class="envelope">
-                        <div class="paper"></div>
-                        <div class="flap"></div>
-                    </div>
-                </div>
+                <div class="message-icon"><div class="envelope"><div class="paper"></div><div class="flap"></div></div></div>
                 <h2>1 New Message</h2>
                 <p>From : HChi</p>
                 <button id="open-btn" type="button">OPEN</button>
             </div>
-
-            <!-- D-Pad -->
             <div class="navigation-pad">
-                <div class="nav-row">
-                    <div></div>
-                    <button class="fake-btn">▲</button>
-                    <div></div>
-                </div>
-                <div class="nav-row">
-                    <button class="fake-btn">◀</button>
-                    <button class="fake-btn center-btn">●</button>
-                    <button class="fake-btn">▶</button>
-                </div>
-                <div class="nav-row">
-                    <div></div>
-                    <button class="fake-btn">▼</button>
-                    <div></div>
-                </div>
+                <div class="nav-row"><div></div><button class="fake-btn">▲</button><div></div></div>
+                <div class="nav-row"><button class="fake-btn">◀</button><button class="fake-btn center-btn">●</button><button class="fake-btn">▶</button></div>
+                <div class="nav-row"><div></div><button class="fake-btn">▼</button><div></div></div>
             </div>
-
-            <!-- Keypad -->
             <div class="keypad">
                 <button class="key">1</button><button class="key">2</button><button class="key">3</button>
                 <button class="key">4</button><button class="key">5</button><button class="key">6</button>
@@ -86,38 +42,26 @@
         </div>
     </section>
 
-    <!-- 3. DECRYPT SCREEN -->
     <section id="decrypt-screen" class="hidden">
         <div class="decrypt-box">
             <h2>Decrypting...</h2>
-            <div class="decrypt-bar">
-                <div id="decrypt-progress"></div>
-            </div>
+            <div class="decrypt-bar"><div id="decrypt-progress"></div></div>
             <p id="decrypt-percent">0%</p>
         </div>
     </section>
 
-    <!-- 4. UNLOCK SCREEN -->
     <section id="unlock-screen" class="hidden">
         <div class="unlock-box">
-            <h2>This message is protected.</h2>
-            <p>Answer the questions below.</p>
             <div id="question-area"></div>
         </div>
     </section>
 
-    <!-- 5. INTRO SCREEN -->
     <section id="intro-screen" class="hidden">
-        <div class="intro-box">
-            <p id="intro-text"></p>
-        </div>
+        <div class="intro-box"><p id="intro-text"></p></div>
     </section>
 
-    <!-- 6. WRAPPED SCREEN -->
     <section id="wrapped-screen" class="hidden">
-        <div class="wrapped-progress">
-            <div id="wrapped-progress-fill"></div>
-        </div>
+        <div class="wrapped-progress"><div id="wrapped-progress-fill"></div></div>
         <img id="wrapped-image" src="" alt="Memory">
         <div class="wrapped-overlay">
             <h2 id="wrapped-title"></h2>
@@ -125,45 +69,32 @@
         </div>
     </section>
 
-    <!-- 7. QUOTES SCREEN -->
     <section id="quotes-screen" class="hidden">
         <div class="quotes-bg"></div>
-        <div class="quotes-box">
-            <p id="quote-text"></p>
-        </div>
+        <div class="quotes-box"><p id="quote-text"></p></div>
     </section>
 
-    <!-- 8. CAKE SCREEN -->
     <section id="cake-screen" class="hidden">
         <div class="cake-wrapper">
             <img id="cake-img" src="images/cake.png" alt="Birthday Cake">
             <img id="flame" src="images/flame.gif" alt="Flame">
         </div>
-        <p id="cake-note">
-            Make a wish <br>
-            Click the flame to blow out the candle
-        </p>
+        <p id="cake-note">Make a wish <br>Click the flame to blow out the candle</p>
     </section>
 
-    <!-- 9. ENDING SCREEN -->
     <section id="ending-screen" class="hidden">
         <h1>Happy Birthday </h1>
         <p> Kiitos, että olet ystäväni </p>
     </section>
 
     <canvas id="confetti"></canvas>
-
     <audio id="bgm" src="music/birthday.mp3" preload="auto"></audio>
 
-    <!-- GSAP -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-
-    <!-- Scripts -->
     <script src="js/script.js"></script>
     <script src="js/unlock.js"></script>
     <script src="js/wrapped.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/cake.js"></script>
-
 </body>
-</html> 
+</html>
