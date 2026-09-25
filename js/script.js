@@ -90,11 +90,11 @@ const timer = setInterval(()=>{
 
     if(loading < 20) loadingStatus.textContent = "Initializing...";
 
-    else if(loading < 40) loadingStatus.textContent = "Loading images...";
+    else if(loading < 40) loadingStatus.textContent = "Loading music...";
 
-    else if(loading < 60) loadingStatus.textContent = "Loading music...";
+    else if(loading < 60) loadingStatus.textContent = "Preparing birthday message...";
 
-    else if(loading < 80) loadingStatus.textContent = "Preparing memories...";
+    else if(loading < 80) loadingStatus.textContent = "Almost ready...";
 
     else loadingStatus.textContent = "Almost ready...";
 
@@ -304,7 +304,7 @@ function showIntro(){
 
                 introScreen.style.display = "none";
 
-                if(typeof showWrapped === "function") showWrapped();
+                if(typeof showQuotes === "function") showQuotes();
 
             }, 1000);
 
