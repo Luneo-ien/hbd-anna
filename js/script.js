@@ -272,7 +272,7 @@ function showIntro(){
 
     const lines = [
 
-        "Hi Maya...",
+        "Hi Anna...",
 
         "I made something for you.",
 
