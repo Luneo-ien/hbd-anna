@@ -8,7 +8,7 @@ const quotes = [
     "Thank you for being part of my life.",
     "And once again...",
     "Happy Birthday ❤️",
-    "Blak busy"
+    "Black busy"
 ];
 
 const quotesScreen = document.getElementById("quotes-screen");
