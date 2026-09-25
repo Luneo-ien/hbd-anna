@@ -1,13 +1,13 @@
 const quotes = [
-    "You questioned everything going wrong for you,",
-    "but maybe nothing was going wrong.",
-    "Maybe it was protection you couldn't see yet.",
-    "Not everything that feels like a loss is actually a loss.",
-    "Sometimes what hurts the most is quietly saving you from something worse.",
-    "I hope today makes you smile.",
-    "Thank you for being part of my life.",
-    "And once again...",
-    "Happy Birthday ❤️"
+    "Sinä kysyit itseltäsi, miksi kaikki meni pieleen,",
+    "mutta ehkä mikään ei oikeasti ollut menossa pieleen.",
+    "Ehkä se oli suojelua, jota et vain vielä nähnyt.",
+    "Kaikki, mikä tuntuu menetykseltä, ei oikeasti ole menetys.",
+    "Joskus se, mikä sattuu eniten, suojelee sinua hiljaa joltain vielä pahemmalta.",
+    "Toivon, että tämä päivä saa sinut hymyilemään.",
+    "Kiitos, että olet osa elämääni.",
+    "Ja vielä kerran...",
+    "Hyvää syntymäpäivää ❤️"
 ];
 
 const quotesScreen = document.getElementById("quotes-screen");
